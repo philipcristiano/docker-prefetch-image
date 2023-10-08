@@ -54,6 +54,7 @@ async fn main() {
         Err(e) => eprintln!("Something bad happened! {e}"),
     }
 
+    let mut exit_code = 0;
     for image in app_config.image {
         let url = image.image;
         tracing::info!("Pulling image {:?}", url);
@@ -63,9 +64,20 @@ async fn main() {
         let dimages = docker.images();
         let mut pull = dimages.pull(&pull_opts);
         while let Some(v) = pull.next().await {
-            tracing::debug!("{:?}", v)
+            match v {
+                Ok(m) => {
+                   tracing::debug!("{:?}", m)
+
+                }
+                Err(err) => {
+                   tracing::error!("{:?}", err);
+                   exit_code = 1
+                }
+            }
         };
 
     }
+
+    std::process::exit(exit_code)
 
 }

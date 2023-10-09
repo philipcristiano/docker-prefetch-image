@@ -25,6 +25,5 @@ docker-prefetch-image -c docker-prefect-image.toml.example
 
 ## Still Todo
 
-* Daemon mode to sleep between attempts to pull
 * "Alternative" location to download an image.
   * Pull from a remote repository, tag it as the local repository. This would allow a fallback to a remote repository but using the image as if it were the local repository.

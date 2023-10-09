@@ -3,7 +3,10 @@ use futures::executor::block_on;
 use serde::Deserialize;
 use std::fs;
 use std::str;
+use std::sync::Arc;
+use std::sync::atomic::{AtomicBool, Ordering};
 
+use tokio::time::{sleep, Duration};
 use futures::StreamExt;
 
 #[derive(Parser, Debug)]
@@ -20,6 +23,7 @@ pub struct Args {
 
 #[derive(Clone, Debug, Deserialize)]
 struct AppConfig {
+    period_seconds: Option<u64>,
     image: Vec<ImageConfig>,
 }
 
@@ -40,10 +44,16 @@ async fn main() {
 
     let app_config: AppConfig = toml::from_str(&config_file_contents).expect("Problems parsing config file");
 
+    // Signal handling
+    let term = Arc::new(AtomicBool::new(false));
+    signal_hook::flag::register(signal_hook::consts::SIGTERM, Arc::clone(&term)).unwrap();
+
+    // Start connections
     tracing::info!("connecting to {}", args.docker_socket);
     let docker =
         docker_api::Docker::new(args.docker_socket).unwrap();
 
+    let sleep_duration = Duration::from_secs(app_config.period_seconds.unwrap_or(1500));
     let imagesf = block_on(docker.images().list(&Default::default()));
     match imagesf {
         Ok(images) => {
@@ -54,30 +64,32 @@ async fn main() {
         Err(e) => eprintln!("Something bad happened! {e}"),
     }
 
-    let mut exit_code = 0;
-    for image in app_config.image {
-        let url = image.image;
-        tracing::info!("Pulling image {:?}", url);
-        // let pull_opts = docker_api::opts::PullOptsBuilder::default().image(url).build();
-        let pull_opts = docker_api::opts::PullOpts::builder().image(url).tag("").build();
-        tracing::info!("Opts {:?}", pull_opts);
-        let dimages = docker.images();
-        let mut pull = dimages.pull(&pull_opts);
-        while let Some(v) = pull.next().await {
-            match v {
-                Ok(m) => {
-                   tracing::debug!("{:?}", m)
+    while !term.load(Ordering::Relaxed) {
+        for image in app_config.image.clone() {
+            let url = image.image;
+            tracing::info!("Pulling image {:?}", url);
+            // let pull_opts = docker_api::opts::PullOptsBuilder::default().image(url).build();
+            let pull_opts = docker_api::opts::PullOpts::builder().image(url).tag("").build();
+            tracing::info!("Opts {:?}", pull_opts);
+            let dimages = docker.images();
+            let mut pull = dimages.pull(&pull_opts);
+            while let Some(v) = pull.next().await {
+                match v {
+                    Ok(m) => {
+                       tracing::debug!("{:?}", m)
 
+                    }
+                    Err(err) => {
+                       tracing::error!("{:?}", err);
+                    }
                 }
-                Err(err) => {
-                   tracing::error!("{:?}", err);
-                   exit_code = 1
-                }
-            }
+            };
+
         };
 
+        tracing::info!("Sleeping for {:?}", sleep_duration);
+        sleep(sleep_duration).await;
     }
 
-    std::process::exit(exit_code)
 
 }

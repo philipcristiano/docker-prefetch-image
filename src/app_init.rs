@@ -3,12 +3,8 @@ use tracing_subscriber::filter::LevelFilter;
 use tracing_subscriber::prelude::*;
 use tracing_subscriber::registry;
 
-use opentelemetry::{global, runtime, Key, KeyValue};
+use opentelemetry::{runtime, KeyValue};
 use opentelemetry_sdk::{
-    metrics::{
-        reader::{DefaultAggregationSelector, DefaultTemporalitySelector},
-        Aggregation, Instrument, MeterProvider, PeriodicReader, Stream,
-    },
     trace::{BatchConfig, RandomIdGenerator, Sampler, Tracer},
     Resource,
 };

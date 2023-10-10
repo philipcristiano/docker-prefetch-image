@@ -66,7 +66,7 @@ async fn main() {
 
     while !term.load(Ordering::Relaxed) {
         for image in app_config.image.clone() {
-            let url = image.image;
+            let url = image.image.clone();
             tracing::info!("Pulling image {:?}", url);
             // let pull_opts = docker_api::opts::PullOptsBuilder::default().image(url).build();
             let pull_opts = docker_api::opts::PullOpts::builder().image(url).tag("").build();
@@ -76,11 +76,16 @@ async fn main() {
             while let Some(v) = pull.next().await {
                 match v {
                     Ok(m) => {
-                       tracing::debug!("{:?}", m)
+                       tracing::debug!(
+                         image = image.image,
+                         "{:?}", m)
 
                     }
                     Err(err) => {
-                       tracing::error!("{:?}", err);
+                       tracing::error!(
+                         image = image.image,
+                         "{:?}", err
+                       );
                     }
                 }
             };

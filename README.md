@@ -4,6 +4,8 @@ Configuration-driven downloading/fetching of Docker images.
 
 This can be used to ensure images are present on a host before a container needs to run.
 
+[Deployable via a Docker image](https://hub.docker.com/r/philipcristiano/docker-prefetch-image).
+
 ## Usage
 
 ```
@@ -21,6 +23,8 @@ Options:
 ```
 docker-prefetch-image -c docker-prefect-image.toml.example
 ```
+
+See [example_job](example_job.hcl) for an example of deploying in Nomad.
 
 
 ## Still Todo

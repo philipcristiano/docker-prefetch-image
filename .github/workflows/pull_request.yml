@@ -11,6 +11,7 @@ jobs:
   automerge_dependabot:
     permissions:
       pull-requests: write
+      contents: write
     uses: "philipcristiano/workflows/.github/workflows/automerge_dependabot.yml@main"
     with:
       automerge: true

@@ -8,6 +8,11 @@ on:
 
 jobs:
 
+  automerge_dependabot:
+    uses: "philipcristiano/workflows/.github/workflows/automerge_dependabot.yml@main"
+    with:
+      automerge: true
+
   docker_build:
     uses: "philipcristiano/workflows/.github/workflows/docker-build.yml@main"
     with:

@@ -9,6 +9,8 @@ on:
 jobs:
 
   automerge_dependabot:
+    permissions:
+      pull-requests: write
     uses: "philipcristiano/workflows/.github/workflows/automerge_dependabot.yml@main"
     with:
       automerge: true

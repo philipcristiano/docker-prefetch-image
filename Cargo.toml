@@ -22,7 +22,7 @@ tracing-opentelemetry = "0.21.0"
 
 opentelemetry = { version = "0.20.0", features = ["rt-tokio"] }
 opentelemetry-otlp = { version = "0.13.0", features = ["grpc-tonic", "http-proto"] }
-opentelemetry_sdk = "0.20.0"
+opentelemetry_sdk = "0.21.0"
 opentelemetry-semantic-conventions = "0.12.0"
 
 tracing-subscriber = { version = "0.3.17", features = ["fmt", "json", "env-filter", "std", "registry"] }

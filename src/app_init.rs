@@ -3,15 +3,13 @@ use tracing_subscriber::filter::LevelFilter;
 use tracing_subscriber::prelude::*;
 use tracing_subscriber::registry;
 
-use opentelemetry::{runtime, KeyValue};
+use opentelemetry::KeyValue;
 use opentelemetry_sdk::{
+    runtime,
     trace::{BatchConfig, RandomIdGenerator, Sampler, Tracer},
     Resource,
 };
-use opentelemetry_semantic_conventions::{
-    resource::{SERVICE_NAME, SERVICE_VERSION},
-    SCHEMA_URL,
-};
+use opentelemetry_semantic_conventions::resource::{SERVICE_NAME, SERVICE_VERSION};
 use tracing_opentelemetry::OpenTelemetryLayer;
 
 pub fn logging(level: Level, is_json: bool) {
@@ -27,7 +25,7 @@ pub fn tracing(level: Level) {
     let subscriber = registry()
         .with(
             OpenTelemetryLayer::new(init_tracer())
-                .with_exception_field_propagation(true)
+                .with_error_records_to_exceptions(true)
                 .with_filter(LevelFilter::from_level(level)),
         )
         .with(
@@ -40,18 +38,11 @@ pub fn tracing(level: Level) {
     tracing::info!("Tracing resource {:?}", resource());
 }
 
-// Create a Resource that captures information about the entity for which telemetry is recorded.
-//fn resource() -> Resource {
-//    Resource::from_schema_url([KeyValue::new(SERVICE_NAME, "app_init")], SCHEMA_URL)
-//}
 fn resource() -> Resource {
-    Resource::from_schema_url(
-        [
-            KeyValue::new(SERVICE_NAME, env!("CARGO_PKG_NAME")),
-            KeyValue::new(SERVICE_VERSION, env!("CARGO_PKG_VERSION")),
-        ],
-        SCHEMA_URL,
-    )
+    Resource::new(vec![
+        KeyValue::new(SERVICE_NAME, env!("CARGO_PKG_NAME")),
+        KeyValue::new(SERVICE_VERSION, env!("CARGO_PKG_VERSION")),
+    ])
 }
 
 // Construct Tracer for OpenTelemetryLayer

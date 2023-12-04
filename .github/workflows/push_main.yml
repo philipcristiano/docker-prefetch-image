@@ -28,7 +28,7 @@ jobs:
     uses: "philipcristiano/workflows/.github/workflows/rust_release.yml@main"
     needs: [flake, rust]
     secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      WF_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
 
   flake:

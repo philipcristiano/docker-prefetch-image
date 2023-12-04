@@ -18,7 +18,7 @@ jobs:
     uses: "philipcristiano/workflows/.github/workflows/docker-build-push.yml@main"
     needs: [flake, rust]
     with:
-      repository: philipcristiano/docker-prefetch-image
+      repository: ${{ github.repository }}
       timeout: 25
 
     secrets:

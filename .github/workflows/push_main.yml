@@ -23,6 +23,13 @@ jobs:
   rust:
     uses: "philipcristiano/workflows/.github/workflows/rust.yml@main"
 
+  rust_release:
+    uses: "philipcristiano/workflows/.github/workflows/rust_release.yml@main"
+    neds: [rust]
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+
   flake:
     uses: "philipcristiano/workflows/.github/workflows/nix.yml@main"
     with:

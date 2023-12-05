@@ -446,18 +446,13 @@ dependencies = [
  "futures",
  "maud",
  "once_cell",
- "opentelemetry",
- "opentelemetry-otlp",
- "opentelemetry-semantic-conventions",
- "opentelemetry_sdk",
  "serde",
  "serde_json",
+ "service_conventions",
  "signal-hook",
  "tokio",
  "toml",
  "tracing",
- "tracing-opentelemetry",
- "tracing-subscriber",
  "url",
 ]
 
@@ -1398,6 +1393,21 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.38",
+]
+
+[[package]]
+name = "service_conventions"
+version = "0.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c14d14c1b1d8d5f57c7116a9e57fab4bdc663bec4e5bd90468c2b37a4b9d8dc4"
+dependencies = [
+ "opentelemetry",
+ "opentelemetry-otlp",
+ "opentelemetry-semantic-conventions",
+ "opentelemetry_sdk",
+ "tracing",
+ "tracing-opentelemetry",
+ "tracing-subscriber",
 ]
 
 [[package]]

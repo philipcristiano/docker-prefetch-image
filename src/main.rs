@@ -32,12 +32,11 @@ struct ImageConfig {
     image: String,
 }
 
-mod app_init;
 
 #[tokio::main]
 async fn main() {
     let args = Args::parse();
-    app_init::tracing(args.log_level);
+    service_conventions::tracing::setup(args.log_level);
 
     let app_config = read_app_config(args.config_file);
     // Signal handling

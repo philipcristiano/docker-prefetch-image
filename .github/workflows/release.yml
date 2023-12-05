@@ -1,6 +1,9 @@
-# release-plz creates the release/tag which won't trigger again for the commit for `push_main` if the tag was added "after" the push
+# release-plz creates the release/tag which won't trigger again for the commit for `push_main`
+name: Docker Release
 
 on:
+  release:
+    types: [published]
   push:
     tags:
       - "*"

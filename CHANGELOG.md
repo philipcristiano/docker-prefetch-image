@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.1.2...v0.1.3) - 2023-12-05
+
+### Other
+- Attempt to push semver tagged docker images
+
 ## [0.1.2](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.1.1...v0.1.2) - 2023-12-05
 
 ### Other

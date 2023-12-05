@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.1.0...v0.1.1) - 2023-12-05
+
+### Other
+- Use library for tracing setup
+- Use variable instead of repo name
+- Add permissions needed for github Token
+- Avoid reserved token conflict
+- Release packages if tests pass
+- Try reusable
+- release
+
 ## [0.1.0](https://github.com/philipcristiano/docker-prefetch-image/releases/tag/v0.1.0) - 2023-12-04
 
 ### Fixed

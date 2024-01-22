@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.5](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.1.4...v0.1.5) - 2024-01-22
+
+### Other
+- Use explicit workflow token
+- *(deps)* bump the minor-dependencies group with 1 update
+- *(deps)* bump the patch-dependencies group with 1 update
+- *(deps)* bump the patch-dependencies group with 1 update
+- *(deps)* bump the patch-dependencies group with 4 updates
+- *(deps)* bump the patch-dependencies group with 3 updates
+- *(deps)* bump rust from 1.74-bookworm to 1.75-bookworm
+- *(deps)* bump the patch-dependencies group with 3 updates
+- *(deps)* bump the minor-dependencies group with 2 updates
+- *(deps)* bump the patch-dependencies group with 1 update
+- *(deps)* bump agenthunt/conventional-commit-checker-action
+
 ## [0.1.4](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.1.3...v0.1.4) - 2023-12-05
 
 ### Other

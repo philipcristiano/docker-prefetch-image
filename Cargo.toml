@@ -8,8 +8,8 @@ license = "Apache-2.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1.0.79"
-clap = { version = "4.5.0", features = ["derive", "env"]}
+anyhow = "1.0.80"
+clap = { version = "4.5.1", features = ["derive", "env"]}
 docker-api = "0.14.0"
 futures = "0.3.30"
 maud = { version = "0.26.0", features = ["axum"] }

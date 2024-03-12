@@ -1509,9 +1509,9 @@ dependencies = [
 
 [[package]]
 name = "service_conventions"
-version = "0.0.4"
+version = "0.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2562b0be11afa980e5b44285f6a0d50a26039ea2e46d710ce7122744089d8484"
+checksum = "ce552960213bd70a576fe9b3eebd177e510dc334bcab62ef143f8ab67669a3db"
 dependencies = [
  "opentelemetry",
  "opentelemetry-otlp",

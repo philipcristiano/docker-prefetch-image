@@ -9,7 +9,7 @@ license = "Apache-2.0"
 
 [dependencies]
 anyhow = "1.0.81"
-clap = { version = "4.5.2", features = ["derive", "env"]}
+clap = { version = "4.5.3", features = ["derive", "env"]}
 docker-api = "0.14.0"
 futures = "0.3.30"
 maud = { version = "0.26.0", features = ["axum"] }

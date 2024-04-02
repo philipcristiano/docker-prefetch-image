@@ -20,7 +20,7 @@ tokio = { version = "1.37.0", features = ["full"]}
 toml = "0.8.12"
 tracing = "0.1.40"
 
-
 url = "2.5.0"
 signal-hook = "0.3.17"
 service_conventions = "0.0.12"
+thiserror = "1.0.58"

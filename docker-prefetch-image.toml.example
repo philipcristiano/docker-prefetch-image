@@ -1,2 +1,9 @@
 [[image]]
 image = "busybox:latest"
+
+[[image]]
+image = "miniflux/miniflux:latest"
+alternative_images = [
+  "ghcr.io/miniflux/miniflux:latest",
+  "quay.io/miniflux/miniflux:latest",
+]

@@ -25,9 +25,3 @@ docker-prefetch-image -c docker-prefect-image.toml.example
 ```
 
 See [example_job](example_job.hcl) for an example of deploying in Nomad.
-
-
-## Still Todo
-
-* "Alternative" location to download an image.
-  * Pull from a remote repository, tag it as the local repository. This would allow a fallback to a remote repository but using the image as if it were the local repository.

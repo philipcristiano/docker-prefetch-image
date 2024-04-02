@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.1.4...v0.2.0) (2024-04-02)
+
+
+### Features
+
+* Fetch alternatives and tag as the desired image ([2a81ca0](https://github.com/philipcristiano/docker-prefetch-image/commit/2a81ca08627af942b1ec7d08ec756fa2fb070d98))
+
+
+### Bug Fixes
+
+* Avoid cargo caching tmp main.rs ([4bf0d8b](https://github.com/philipcristiano/docker-prefetch-image/commit/4bf0d8b9ed0017062b9d047eace3491d7061e870))
+* **deps:** update rust crate anyhow to 1.0.81 ([d734433](https://github.com/philipcristiano/docker-prefetch-image/commit/d734433c67a98941f78c6b1fd83059318bf274c3))
+* **deps:** update rust crate clap to 4.5.2 ([5fb46a4](https://github.com/philipcristiano/docker-prefetch-image/commit/5fb46a4f52f31e92e77348c8e834d8d058e88209))
+* **deps:** update rust crate clap to 4.5.3 ([51de76d](https://github.com/philipcristiano/docker-prefetch-image/commit/51de76d24889f6d09be37a697bfff003213d2c9b))
+* **deps:** update rust crate clap to 4.5.4 ([2eb6f57](https://github.com/philipcristiano/docker-prefetch-image/commit/2eb6f579fde84bad0aac4fe49d762b64532b9f88))
+* **deps:** update rust crate service_conventions to 0.0.10 ([1064808](https://github.com/philipcristiano/docker-prefetch-image/commit/1064808fc5759b8032459992fe58ac42f9546af8))
+* **deps:** update rust crate service_conventions to 0.0.12 ([21f5821](https://github.com/philipcristiano/docker-prefetch-image/commit/21f5821b82e969bdb5c32809b46334560ea59194))
+* **deps:** update rust crate service_conventions to 0.0.3 ([2a7d298](https://github.com/philipcristiano/docker-prefetch-image/commit/2a7d2982c444bcc4bf7b02bc8fb9c21845269b03))
+* **deps:** update rust crate service_conventions to 0.0.4 ([10a4d7e](https://github.com/philipcristiano/docker-prefetch-image/commit/10a4d7e7731da8dd73e5977cc5f90cb7d3d57f9d))
+* **deps:** update rust crate service_conventions to 0.0.5 ([93829b3](https://github.com/philipcristiano/docker-prefetch-image/commit/93829b37dfb71d75ae16ae7155b36155ec0d2671))
+* **deps:** update rust crate service_conventions to 0.0.6 ([6fe1ee3](https://github.com/philipcristiano/docker-prefetch-image/commit/6fe1ee39f52682b151921c413d4e663d2b202ca6))
+* **deps:** update rust crate service_conventions to 0.0.7 ([785aba3](https://github.com/philipcristiano/docker-prefetch-image/commit/785aba3c49da4f7193d38b5cc67977d976084de0))
+* **deps:** update rust crate service_conventions to 0.0.8 ([de11045](https://github.com/philipcristiano/docker-prefetch-image/commit/de1104551a24db03928d683f6e82131f244df3d4))
+* **deps:** update rust crate tokio to 1.37.0 ([3081157](https://github.com/philipcristiano/docker-prefetch-image/commit/3081157e23a88e4272520c03dcc520d6257a8404))
+* **deps:** update rust crate toml to 0.8.11 ([32f57cb](https://github.com/philipcristiano/docker-prefetch-image/commit/32f57cb243183b27167ffa3004d078f6a61efb30))
+* **deps:** update rust crate toml to 0.8.12 ([22f2b83](https://github.com/philipcristiano/docker-prefetch-image/commit/22f2b835db3393de3db717f7f4ccc1b47f1c6241))
+
 ## [Unreleased]
 
 ## [0.1.4](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.1.3...v0.1.4) - 2023-12-05

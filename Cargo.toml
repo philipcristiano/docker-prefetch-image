@@ -1,6 +1,6 @@
 [package]
 name = "docker-prefetch-image"
-version = "0.1.4"
+version = "0.2.0"
 edition = "2021"
 description = "Pull Docker images to a Docker daemon via a configuration file"
 license = "Apache-2.0"

@@ -22,5 +22,5 @@ tracing = "0.1.40"
 
 url = "2.5.0"
 signal-hook = "0.3.17"
-service_conventions = "0.0.13"
+service_conventions = "0.0.14"
 thiserror = "1.0.58"

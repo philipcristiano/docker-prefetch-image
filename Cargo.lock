@@ -2011,6 +2011,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "redacted"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "72fc626fd3c672387479aa3ff6c3b632867062940b262055de49c9fc0e122a71"
+dependencies = [
+ "hex",
+ "serde",
+ "serde_bytes",
+ "zeroize",
+]
+
+[[package]]
 name = "redox_syscall"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2375,6 +2387,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde_bytes"
+version = "0.11.14"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8b8497c313fd43ab992087548117643f6fcd935cbf36f176ffda0aacf9591734"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "serde_derive"
 version = "1.0.197"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2496,9 +2517,9 @@ dependencies = [
 
 [[package]]
 name = "service_conventions"
-version = "0.0.14"
+version = "0.0.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3f4a61990092e3c8fd463a42b32ac0ac88e9e5d570ce9124241c30e5bde2902a"
+checksum = "7a1307d60806fb58728efeb6745297c5365e0a6a0e10e54f1f8bfa778f5ac471"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -2513,6 +2534,7 @@ dependencies = [
  "opentelemetry-otlp",
  "opentelemetry-semantic-conventions",
  "opentelemetry_sdk",
+ "redacted",
  "serde",
  "serde_json",
  "tower-cookies",

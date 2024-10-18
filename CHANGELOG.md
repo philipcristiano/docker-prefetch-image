@@ -4,6 +4,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.2](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.2.1...v0.2.2) (2024-10-18)
+
+
+### Bug Fixes
+
+* **deps:** update rust crate anyhow to v1.0.90 ([dd44a73](https://github.com/philipcristiano/docker-prefetch-image/commit/dd44a73bb666f0efdc1849474d6cd22144d222cb))
+* **deps:** update rust crate clap to v4.5.14 ([7a605ad](https://github.com/philipcristiano/docker-prefetch-image/commit/7a605ad9c5f78149fa5902e3f47276784a0340b7))
+* **deps:** update rust crate clap to v4.5.15 ([14aa485](https://github.com/philipcristiano/docker-prefetch-image/commit/14aa485a03bacb417705544068aa09871a547412))
+* **deps:** update rust crate clap to v4.5.16 ([7674cd0](https://github.com/philipcristiano/docker-prefetch-image/commit/7674cd08419873a80e23acae0ef2ac4004c60315))
+* **deps:** update rust crate clap to v4.5.18 ([29fe9d1](https://github.com/philipcristiano/docker-prefetch-image/commit/29fe9d10b0d4976d12c2264e62d3a54ef6f6e557))
+* **deps:** update rust crate clap to v4.5.19 ([57e587e](https://github.com/philipcristiano/docker-prefetch-image/commit/57e587ea917ec8f20d2baae15b867b8f92024c2a))
+* **deps:** update rust crate clap to v4.5.20 ([c5ff572](https://github.com/philipcristiano/docker-prefetch-image/commit/c5ff5721b886899cf31c48df3a9142a83292627b))
+* **deps:** update rust crate futures to v0.3.31 ([b00e7c4](https://github.com/philipcristiano/docker-prefetch-image/commit/b00e7c4e94c382e834907be6e9aa2a69b56fa6f3))
+* **deps:** update rust crate once_cell to v1.20.1 ([8a87066](https://github.com/philipcristiano/docker-prefetch-image/commit/8a870666aea879294a2c669760dc72bd5a65fec6))
+* **deps:** update rust crate once_cell to v1.20.2 ([41c216a](https://github.com/philipcristiano/docker-prefetch-image/commit/41c216a2a1fa198dfb428c0c7b1904822d181723))
+* **deps:** update rust crate serde to v1.0.205 ([76540cb](https://github.com/philipcristiano/docker-prefetch-image/commit/76540cb75e6ebcf20b54edd27e67a3a5fd2b469a))
+* **deps:** update rust crate serde to v1.0.206 ([6d5367b](https://github.com/philipcristiano/docker-prefetch-image/commit/6d5367b9d9ed2001da4e15ada26f1924c8fba9bd))
+* **deps:** update rust crate serde to v1.0.207 ([a7a477f](https://github.com/philipcristiano/docker-prefetch-image/commit/a7a477f4ac381efd791fe8bf7a52ebc6a797bd89))
+* **deps:** update rust crate serde to v1.0.208 ([8772769](https://github.com/philipcristiano/docker-prefetch-image/commit/87727690a2f00cc6a4aa6d7c4a6322714464df63))
+* **deps:** update rust crate serde to v1.0.209 ([8a1c916](https://github.com/philipcristiano/docker-prefetch-image/commit/8a1c916086ebebdb213d5a8acfa4aa7242125bda))
+* **deps:** update rust crate serde_json to v1.0.123 ([088021f](https://github.com/philipcristiano/docker-prefetch-image/commit/088021fcbd3b2f36115f86c4bd49debfd1207442))
+* **deps:** update rust crate serde_json to v1.0.124 ([ef98767](https://github.com/philipcristiano/docker-prefetch-image/commit/ef987678b433532b0de638751c79628af57539ce))
+* **deps:** update rust crate serde_json to v1.0.125 ([c7e31ee](https://github.com/philipcristiano/docker-prefetch-image/commit/c7e31ee9cf40e799a845708208cb23285d90357f))
+* **deps:** update rust crate serde_json to v1.0.126 ([8f5d044](https://github.com/philipcristiano/docker-prefetch-image/commit/8f5d044e2fd3174406eb182caa1da9d2680aaf05))
+* **deps:** update rust crate serde_json to v1.0.127 ([157b67d](https://github.com/philipcristiano/docker-prefetch-image/commit/157b67d60991129320ccc96410adaff365e8fb65))
+* **deps:** update rust crate serde_json to v1.0.129 ([821922c](https://github.com/philipcristiano/docker-prefetch-image/commit/821922c94eae429d9c763433eca18bc1d9be4715))
+* **deps:** update rust crate serde_json to v1.0.130 ([dd5e7ee](https://github.com/philipcristiano/docker-prefetch-image/commit/dd5e7ee08e567a985cf82da37e7d5f206f79b2e1))
+* **deps:** update rust crate serde_json to v1.0.131 ([e064843](https://github.com/philipcristiano/docker-prefetch-image/commit/e064843e5e54ef73828e61327095fb43715883fa))
+* **deps:** update rust crate service_conventions to 0.0.20 ([fd33d2f](https://github.com/philipcristiano/docker-prefetch-image/commit/fd33d2fb017cdd0ed268069df412826012cd20df))
+* **deps:** update rust crate service_conventions to 0.0.21 ([3a0908c](https://github.com/philipcristiano/docker-prefetch-image/commit/3a0908cdd2ab386a4ec29a08239563c448cd1049))
+* **deps:** update rust crate service_conventions to 0.0.22 ([8ef5131](https://github.com/philipcristiano/docker-prefetch-image/commit/8ef5131cd7b56ead2a1b9b543a8207ff4fc5a930))
+* **deps:** update rust crate service_conventions to 0.0.23 ([e0717d4](https://github.com/philipcristiano/docker-prefetch-image/commit/e0717d49ec15b7046659b6057c86fe42ebe8b0de))
+* **deps:** update rust crate thiserror to v1.0.64 ([c338d91](https://github.com/philipcristiano/docker-prefetch-image/commit/c338d91866b2ab476eee4bdd1abd66f1aecd3014))
+* **deps:** update rust crate tokio to v1.39.3 ([cfb22c7](https://github.com/philipcristiano/docker-prefetch-image/commit/cfb22c7766b4bb2a71e4666be3a0308b05dae623))
+* **deps:** update rust crate tokio to v1.40.0 ([fe36c8f](https://github.com/philipcristiano/docker-prefetch-image/commit/fe36c8f7b1d6508e1a9adaa24af264c68765b8a3))
+
 ## [0.2.1](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.2.0...v0.2.1) (2024-08-03)
 
 

@@ -140,7 +140,10 @@ async fn pull_image(docker: &bollard::Docker, url: String) -> Result<(), PullErr
             ..Default::default()
         }))
         .await?;
-    // TODO: If image exists, don't try to pull
+    if images.len() > 0 {
+        tracing::info!("Image exists, not pulling {:?}", images);
+        return Ok(());
+    };
     tracing::info!("Opts {:?}", pull_opts);
     let options = Some(bollard::image::CreateImageOptions {
         from_image: url.clone(),

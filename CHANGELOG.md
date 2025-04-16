@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.3](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.2.2...v0.2.3) (2025-04-16)
+
+
+### Bug Fixes
+
+* Don't pull if image already exists ([083d88a](https://github.com/philipcristiano/docker-prefetch-image/commit/083d88a8d26d93a8f59e8762b9c6460ae43dab97))
+
 ## [0.2.2](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.2.1...v0.2.2) (2025-04-16)
 
 

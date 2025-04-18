@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.4](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.2.3...v0.2.4) (2025-04-18)
+
+
+### Bug Fixes
+
+* **deps:** update rust crate clap to v4.5.37 ([#317](https://github.com/philipcristiano/docker-prefetch-image/issues/317)) ([db5df9a](https://github.com/philipcristiano/docker-prefetch-image/commit/db5df9a89872f3d9cba1bc05fac2d457d8c57a65))
+* **deps:** update rust crate thiserror to v2 ([1ada116](https://github.com/philipcristiano/docker-prefetch-image/commit/1ada1162e0dc80f2265a5681bd9e1b5814e3a08d))
+
 ## [0.2.3](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.2.2...v0.2.3) (2025-04-16)
 
 

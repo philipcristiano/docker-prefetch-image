@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.4](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.2.3...v0.2.4) (2025-05-24)
+
+
+### Bug Fixes
+
+* **deps:** update rust crate bollard to 0.19.0 ([#329](https://github.com/philipcristiano/docker-prefetch-image/issues/329)) ([712d626](https://github.com/philipcristiano/docker-prefetch-image/commit/712d6264664bebeeae1fcb892ce95fe90960468c))
+* **deps:** update rust crate clap to v4.5.37 ([#317](https://github.com/philipcristiano/docker-prefetch-image/issues/317)) ([db5df9a](https://github.com/philipcristiano/docker-prefetch-image/commit/db5df9a89872f3d9cba1bc05fac2d457d8c57a65))
+* **deps:** update rust crate clap to v4.5.38 ([#327](https://github.com/philipcristiano/docker-prefetch-image/issues/327)) ([32253d1](https://github.com/philipcristiano/docker-prefetch-image/commit/32253d14220af2fbca97169295d0e1b8c0643664))
+* **deps:** update rust crate signal-hook to v0.3.18 ([#326](https://github.com/philipcristiano/docker-prefetch-image/issues/326)) ([762622d](https://github.com/philipcristiano/docker-prefetch-image/commit/762622d9a7349a913ff63282f0dbc6794b60794e))
+* **deps:** update rust crate thiserror to v2 ([1ada116](https://github.com/philipcristiano/docker-prefetch-image/commit/1ada1162e0dc80f2265a5681bd9e1b5814e3a08d))
+* **deps:** update rust crate tokio to v1.45.0 ([#325](https://github.com/philipcristiano/docker-prefetch-image/issues/325)) ([b2e2ba3](https://github.com/philipcristiano/docker-prefetch-image/commit/b2e2ba3dee8e9e3a7e68aa025f6080a1eb97bd13))
+* **deps:** update rust crate tokio to v1.45.1 ([#331](https://github.com/philipcristiano/docker-prefetch-image/issues/331)) ([3305d76](https://github.com/philipcristiano/docker-prefetch-image/commit/3305d7620ed53059b4728d811578392d89418efa))
+* **deps:** update rust crate toml to v0.8.21 ([#320](https://github.com/philipcristiano/docker-prefetch-image/issues/320)) ([e363a34](https://github.com/philipcristiano/docker-prefetch-image/commit/e363a34dc3db0a63c632f472ac9fb87c1498896f))
+* **deps:** update rust crate toml to v0.8.22 ([#322](https://github.com/philipcristiano/docker-prefetch-image/issues/322)) ([088fa0c](https://github.com/philipcristiano/docker-prefetch-image/commit/088fa0cc7fece6c44cbda83cdce9ce5c6da21155))
+
 ## [0.2.3](https://github.com/philipcristiano/docker-prefetch-image/compare/v0.2.2...v0.2.3) (2025-04-16)
 
 

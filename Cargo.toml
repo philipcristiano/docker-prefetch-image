@@ -22,7 +22,7 @@ tracing = "0.1.40"
 
 url = "2.5.0"
 signal-hook = "0.3.17"
-service_conventions = "0.0.30"
+service_conventions = "0.0.31"
 thiserror = "2.0.0"
 bollard = "0.19.0"
 docker-image = "0.2.1"
